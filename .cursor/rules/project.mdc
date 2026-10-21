@@ -1,0 +1,35 @@
+
+---
+description: Shared engineering instructions for this Python project
+alwaysApply: true
+---
+
+# Project Rules
+
+Follow the engineering instructions in `AGENTS.md`.
+
+`AGENTS.md` is the primary source of project-wide rules.
+
+Before non-trivial implementation:
+- Inspect relevant code and tests.
+- Read applicable architecture documentation.
+- Propose an implementation plan.
+- Wait for approval before significant changes.
+
+After implementation:
+- Run relevant tests.
+- Run applicable quality checks using `just`.
+- Review the diff.
+- Summarize changes and remaining risks.
+
+Never commit or push without explicit approval.
+
+For architecture tasks, consult:
+- `docs/architecture/overview.md`
+- Relevant ADRs in `docs/architecture/decisions/`
+
+For product tasks, consult:
+- `docs/product/vision.md`
+
+Do not introduce project-specific technology assumptions
+that are not documented in the repository.

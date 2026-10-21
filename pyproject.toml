@@ -1,0 +1,48 @@
+[project]
+name = "python-ai-starter"
+version = "0.1.0"
+description = "Reusable Python project starter with AI development workflows"
+readme = "README.md"
+authors = [
+    { name = "Daria Pogudina", email = "darynet.com@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+    "ty>=0.0.90",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "B",
+    "UP",
+    "S",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/*" = ["S101"]
+"test_*.py" = ["S101"]
+"*_test.py" = ["S101"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
